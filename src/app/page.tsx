@@ -438,15 +438,6 @@ export default function WisataMelungPage() {
           </div>
         </motion.div>
 
-        <motion.div
-          className="melung-hero-scroll"
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          transition={{ delay: 1.5 }}
-        >
-          <span style={{ fontSize: 12, fontWeight: 600, letterSpacing: 1 }}>SCROLL</span>
-          <ChevronDown size={20} />
-        </motion.div>
       </section>
 
       {/* ===== HIGHLIGHTS ===== */}
