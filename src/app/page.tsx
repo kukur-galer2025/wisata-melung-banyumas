@@ -42,7 +42,7 @@ const fadeUp = {
   visible: (i: number) => ({
     opacity: 1,
     y: 0,
-    transition: { delay: i * 0.1, duration: 0.6, ease: [0.4, 0, 0.2, 1] },
+    transition: { delay: i * 0.1, duration: 0.6 },
   }),
 };
 
@@ -56,7 +56,7 @@ const scaleIn = {
   visible: (i: number) => ({
     opacity: 1,
     scale: 1,
-    transition: { delay: i * 0.08, duration: 0.5, ease: [0.4, 0, 0.2, 1] },
+    transition: { delay: i * 0.08, duration: 0.5 },
   }),
 };
 
@@ -130,30 +130,35 @@ const features = [
 /* ---------- Gallery Data ---------- */
 const gallery = [
   {
-    src: "/melung-hero.png",
-    alt: "Kolam renang alami Pagubugan Melung di tengah sawah",
-    label: "Kolam Renang Alami",
+    src: "/wisata-1.jpeg",
+    alt: "Gazebo bambu di pinggir sawah Pagubugan Melung",
+    label: "Gazebo Bersantai",
     large: true,
   },
   {
-    src: "/melung-pool.png",
-    alt: "Keseruan berenang di Pagubugan Melung",
-    label: "Keseruan Berenang",
+    src: "/wisata-2.jpeg",
+    alt: "Kolam renang alami di Pagubugan Melung",
+    label: "Kolam Renang Alami",
   },
   {
-    src: "/melung-selfie.png",
-    alt: "Spot foto instagramable Jembatan Manggis",
-    label: "Spot Foto",
+    src: "/wisata-3.jpeg",
+    alt: "Pemandangan kolam dan bukit di Pagubugan Melung",
+    label: "Pemandangan Kolam",
   },
   {
-    src: "/melung-ricefield.png",
-    alt: "Hamparan sawah terasering di Desa Melung",
-    label: "Sawah Terasering",
+    src: "/wisata-4.jpeg",
+    alt: "Papan informasi fasilitas di Pagubugan Melung",
+    label: "Papan Informasi",
   },
   {
-    src: "/melung-camping.png",
-    alt: "Camping ground di Pagubugan Melung",
-    label: "Camping Ground",
+    src: "/wisata-5.jpeg",
+    alt: "Akses jalan setapak batu di pinggir aliran air",
+    label: "Jalan Setapak",
+  },
+  {
+    src: "/wisata-6.jpeg",
+    alt: "Area bermain dan gazebo di Pagubugan Melung",
+    label: "Area Bermain & Gazebo",
   },
 ];
 
@@ -238,12 +243,11 @@ function Particles() {
 
 /* ---------- Fasilitas Data ---------- */
 const amenities = [
-  { icon: <Car size={24} />, title: "Area Parkir Luas", desc: "Tersedia untuk motor dan mobil pengunjung" },
-  { icon: <Droplets size={24} />, title: "Toilet & Kamar Bilas", desc: "Fasilitas bersih dengan air yang mengalir deras" },
-  { icon: <Coffee size={24} />, title: "Warung Makan", desc: "Menyediakan mendoan hangat & kopi lokal" },
-  { icon: <Mountain size={24} />, title: "Pendopo Istirahat", desc: "Tempat berteduh nyaman setelah berenang" },
-  { icon: <ShieldCheck size={24} />, title: "Keamanan 24 Jam", desc: "Lingkungan aman untuk pengunjung & camper" },
-  { icon: <Wifi size={24} />, title: "Sinyal Telekomunikasi", desc: "Jaringan untuk beberapa operator cukup stabil" },
+  { icon: <Waves size={24} />, title: "Kolam Renang Alami", desc: "Air jernih dan segar langsung dari pegunungan" },
+  { icon: <Mountain size={24} />, title: "Gazebo", desc: "Tempat bersantai nyaman menikmati pemandangan" },
+  { icon: <Tent size={24} />, title: "Area Kemping", desc: "Spot mendirikan tenda yang asri dan tenang" },
+  { icon: <Droplets size={24} />, title: "Toilet / Kamar Bilas", desc: "Fasilitas bersih dengan air yang mengalir deras" },
+  { icon: <UtensilsCrossed size={24} />, title: "Warung Makan Lokal", desc: "Menyediakan mendoan hangat & kuliner khas" },
 ];
 
 /* ---------- FAQ Data ---------- */
@@ -355,7 +359,7 @@ export default function WisataMelungPage() {
       <section className="melung-hero" ref={heroRef}>
         <motion.div className="melung-hero-bg" style={{ y: heroY }}>
           <Image
-            src="/melung-hero.png"
+            src="/wisata-1.jpeg"
             alt="Wisata Pagubugan Melung — Kolam renang alami di tengah sawah"
             fill
             priority
@@ -370,7 +374,7 @@ export default function WisataMelungPage() {
           style={{ opacity: heroOpacity }}
           initial={{ opacity: 0, y: 50 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.9, ease: [0.4, 0, 0.2, 1] }}
+          transition={{ duration: 0.9 }}
         >
           <motion.div
             className="melung-hero-badge"
@@ -420,7 +424,7 @@ export default function WisataMelungPage() {
               <span className="melung-hero-stat-label">Meter dpl</span>
             </div>
             <div className="melung-hero-stat">
-              <span className="melung-hero-stat-value">10K</span>
+              <span className="melung-hero-stat-value">12K</span>
               <span className="melung-hero-stat-label">Harga Tiket (IDR)</span>
             </div>
             <div className="melung-hero-stat">
@@ -520,7 +524,7 @@ export default function WisataMelungPage() {
         <div className="melung-about-grid">
           <motion.div className="melung-about-image" variants={fadeUp} custom={0}>
             <Image
-              src="/melung-ricefield.png"
+              src="/wisata-2.jpeg"
               alt="Hamparan sawah terasering di Desa Melung"
               width={640}
               height={480}
@@ -585,6 +589,28 @@ export default function WisataMelungPage() {
             </motion.a>
           </motion.div>
         </div>
+
+        {/* Video Dokumenter */}
+        <motion.div variants={fadeUp} custom={2} style={{ marginTop: 80, textAlign: "center" }}>
+          <h3 style={{ fontSize: 24, fontWeight: 700, marginBottom: 12, color: "var(--melung-text)" }}>
+            Silakan Lihat Film Dokumenter Kami
+          </h3>
+          <p style={{ color: "var(--melung-text-muted)", marginBottom: 32, fontSize: 16 }}>
+            Kenali lebih dekat pesona alam, budaya, dan keseruan yang ada di Desa Wisata Pagubugan Melung.
+          </p>
+          <div className="melung-video-wrapper">
+            <iframe 
+              width="560" 
+              height="315" 
+              src="https://www.youtube.com/embed/jGRqIEgB5eY?si=N8TvuK6ZbfHg3QHR" 
+              title="YouTube video player" 
+              frameBorder="0" 
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+              referrerPolicy="strict-origin-when-cross-origin" 
+              allowFullScreen
+            ></iframe>
+          </div>
+        </motion.div>
       </AnimatedSection>
 
       {/* ===== INFO CARDS ===== */}
@@ -621,7 +647,7 @@ export default function WisataMelungPage() {
               <Ticket size={26} />
             </div>
             <h3>Tiket Masuk</h3>
-            <p className="price-tag">Rp10.000</p>
+            <p className="price-tag">Rp12.000</p>
             <p>Per Orang</p>
             <div style={{ display: "flex", alignItems: "center", justifyContent: "center", gap: 8, marginTop: 12 }}>
               <CreditCard size={16} style={{ color: "var(--melung-text-muted)" }} />
@@ -639,7 +665,7 @@ export default function WisataMelungPage() {
             <p style={{ fontSize: 28, fontWeight: 800, color: "var(--melung-primary)", margin: "8px 0" }}>
               ~30 Menit
             </p>
-            <p>Dari Purwokerto</p>
+            <p>Dari Pusat Kota Purwokerto</p>
             <p style={{ marginTop: 8, fontSize: 13, color: "var(--melung-text-muted)" }}>
               Jarak ±10–15 km, jalan beraspal
             </p>
@@ -747,7 +773,7 @@ export default function WisataMelungPage() {
         <div className="melung-map-container">
           <motion.div className="melung-map-frame" variants={fadeUp} custom={0}>
             <iframe
-              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3956.2!2d109.2!3d-7.35!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e655e8e0b6ee5ab%3A0x82f7a5b5c5b5a5b5!2sPagubugan%20Melung!5e0!3m2!1sid!2sid!4v1700000000000!5m2!1sid!2sid"
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3957.1806539653844!2d109.20513687357344!3d-7.333598292674819!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e6ff53f21362edd%3A0xb3deeb8d6c37ef9d!2sWisata%20Pagubugan%20Melung!5e0!3m2!1sid!2sid!4v1781592913278!5m2!1sid!2sid"
               allowFullScreen
               loading="lazy"
               referrerPolicy="no-referrer-when-downgrade"
@@ -837,8 +863,7 @@ export default function WisataMelungPage() {
         >
           <h2>Siap untuk Petualangan?</h2>
           <p>
-            Ajak keluarga & sahabat menikmati kesejukan alam Pagubugan Melung.
-            Hanya Rp10.000 per orang!
+            Ajak keluarga & sahabat menikmati kesejukan alam Pagubugan Melung. Hanya Rp12.000 per orang!
           </p>
           <motion.a
             href="https://www.google.com/maps/search/Pagubugan+Melung"
