@@ -262,8 +262,8 @@ const faqs = [
 function FaqAccordion({ q, a }: { q: string, a: string }) {
   const [isOpen, setIsOpen] = useState(false);
   return (
-    <motion.div 
-      className={`melung-faq-item ${isOpen ? 'open' : ''}`} 
+    <motion.div
+      className={`melung-faq-item ${isOpen ? 'open' : ''}`}
       onClick={() => setIsOpen(!isOpen)}
       whileHover={{ y: -2 }}
     >
@@ -590,14 +590,14 @@ export default function WisataMelungPage() {
             Kenali lebih dekat pesona alam, budaya, dan keseruan yang ada di Desa Wisata Pagubugan Melung.
           </p>
           <div className="melung-video-wrapper">
-            <iframe 
-              width="560" 
-              height="315" 
-              src="https://www.youtube.com/embed/jGRqIEgB5eY?si=N8TvuK6ZbfHg3QHR" 
-              title="YouTube video player" 
-              frameBorder="0" 
-              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
-              referrerPolicy="strict-origin-when-cross-origin" 
+            <iframe
+              width="560"
+              height="315"
+              src="https://www.youtube.com/embed/jGRqIEgB5eY?si=N8TvuK6ZbfHg3QHR"
+              title="YouTube video player"
+              frameBorder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+              referrerPolicy="strict-origin-when-cross-origin"
               allowFullScreen
             ></iframe>
           </div>
@@ -681,8 +681,8 @@ export default function WisataMelungPage() {
 
         <div className="melung-amenities-grid">
           {amenities.map((item, i) => (
-            <motion.div 
-              key={i} 
+            <motion.div
+              key={i}
               className="melung-amenity-card"
               variants={scaleIn}
               custom={i}
@@ -931,7 +931,7 @@ export default function WisataMelungPage() {
 
           <div className="melung-footer-bottom">
             <p>© 2026 Wisata Pagubugan Melung. Desa Melung, Kedungbanteng, Banyumas.</p>
-            <p>Made with ❤️ for Banyumas Tourism</p>
+            <p>Made with Mahasiswa Unsoed</p>
           </div>
         </div>
       </footer>
