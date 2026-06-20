@@ -165,45 +165,24 @@ const gallery = [
 /* ---------- Reviews Data ---------- */
 const reviews = [
   {
-    name: "Anisa Rahma",
-    initial: "AR",
-    date: "Mei 2026",
-    text: "Tempatnya sangat indah dan menyejukkan! Kolam renangnya bersih banget, airnya langsung dari mata air pegunungan. Anak-anak senang banget bermain di sini.",
-    stars: 5,
-  },
-  {
-    name: "Budi Santoso",
-    initial: "BS",
-    date: "April 2026",
-    text: "Hidden gem Banyumas! Pemandangan sawah terasering yang luar biasa. Harga tiket sangat terjangkau. Cocok untuk healing bareng keluarga di akhir pekan.",
-    stars: 5,
-  },
-  {
-    name: "Dian Puspita",
-    initial: "DP",
-    date: "April 2026",
-    text: "Spot foto di sini keren banget. Jembatan Manggis dan selfie deck di atas sawah itu wajib dicoba. Makanan di warungnya juga enak, mendoannya juara!",
-    stars: 5,
-  },
-  {
-    name: "Rizky Firmansyah",
-    initial: "RF",
-    date: "Maret 2026",
-    text: "Camping di sini pengalaman yang luar biasa. Bangun pagi dengan pemandangan Gunung Slamet yang megah. Udara sejuk, suasana tenang. Pasti balik lagi!",
-    stars: 5,
-  },
-  {
-    name: "Siti Nurhaliza",
-    initial: "SN",
-    date: "Maret 2026",
-    text: "Datang sama teman-teman untuk ciblon di kali. Airnya segar banget! Fasilitas lengkap, ada toilet, ruang ganti, dan pendapa untuk istirahat.",
-    stars: 4,
-  },
-  {
-    name: "Andi Prasetyo",
+    name: "Asyara Projects",
     initial: "AP",
+    date: "Mei 2026",
+    text: "Tempatnya asri, sejuk dan bersih. Airnya dingin dan menyegarkan. Kolam renangnya juga bersih, airnya jernih. Semoga bisa jadi destinasi wisata yang terus berkembang...",
+    stars: 5,
+  },
+  {
+    name: "lusi ambarwati",
+    initial: "LA",
     date: "Februari 2026",
-    text: "Akses jalan sudah bagus meskipun ada beberapa titik sempit. Setibanya di lokasi langsung terpukau dengan keindahannya. Worth it banget!",
+    text: "Sangat indah utk di pandang dan berada pengen bnget tunggu di tmpt seperti itu,,, tempat nya luar biasa dan sy harap di jagalah sll tempat seperti ini...",
+    stars: 5,
+  },
+  {
+    name: "Bagus Trt",
+    initial: "BT",
+    date: "November 2025",
+    text: "Tempat wisata dengan pemandangan yang bagus, suasananya adem dan sejuk, parkirnya luas, tike masuk 10 ribu dan bayar parkir 2 rb, cocok untuk santai...",
     stars: 5,
   },
 ];
@@ -428,7 +407,7 @@ export default function WisataMelungPage() {
               <span className="melung-hero-stat-label">Harga Tiket (IDR)</span>
             </div>
             <div className="melung-hero-stat">
-              <span className="melung-hero-stat-value">4.8</span>
+              <span className="melung-hero-stat-value">4.5</span>
               <span className="melung-hero-stat-label">Rating Pengunjung</span>
             </div>
             <div className="melung-hero-stat">
